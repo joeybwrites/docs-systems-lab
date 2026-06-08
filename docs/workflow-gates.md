@@ -13,6 +13,10 @@ Workflow gates convert "looks good" into explicit checks. They do not replace hu
 | Publish | Navigation, links, redirects, and release notes are coherent | New page exists but is not discoverable |
 | Memory | Reusable decisions and patterns are captured | Same decision must be rediscovered next launch |
 
+## What Is Automated Here
+
+The gates above describe human-applied judgment. In this repo only a thin slice is automated: `scripts/quality_gate.py` enforces structural checks and a coarse Privacy term scan. Source, Scope, Quality, Publish, and Memory stay human decisions. The point of automating the floor is to spend reviewer attention on judgment instead of bookkeeping, not to claim a script can judge documentation quality.
+
 ## Gate Response Shape
 
 ```json

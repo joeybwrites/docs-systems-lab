@@ -24,9 +24,20 @@ The purpose is to make documentation systems thinking visible: how a senior docu
 
 The emphasis is not "use more AI." The emphasis is designing workflows where AI assistance is bounded, reviewable, and economically tractable.
 
+## Scope and Limits
+
+This is a compact demonstration, not a product. A few things to read honestly:
+
+- `scripts/quality_gate.py` is a structure and public-safety hygiene check (required files, schema, a coarse banned-term scan). It does not judge content quality. Quality as accuracy, clarity, and reader success stays human-owned; the script enforces the mechanical floor only.
+- `scripts/eval_tool_retrieval.py` is an illustrative keyword-overlap demo over five hand-written cases. It shows the shape of baseline-relative evaluation. It is not a production metric, is not statistically meaningful, and is not the chance-corrected, information-theoretic method from the related research it gestures at.
+- The public-safety term scan is a minimal backstop, not a substitute for human review. A short denylist will miss most real leaks.
+- The knowledge graph is a schema sketch, not a system with demonstrated findings.
+
+The value here is the operating model and the discipline, not the size or sophistication of the scripts.
+
 ## Quick Start
 
-Run the quality gate:
+Run the structure and public-safety checks:
 
 ```bash
 python scripts/quality_gate.py
@@ -61,7 +72,7 @@ Both scripts use only the Python standard library.
 
 This repo is designed to support a portfolio claim like:
 
-> I build documentation systems that connect developer documentation, AI-assisted workflows, quality gates, knowledge graphs, and retrieval evaluation into durable operating infrastructure.
+> I build documentation systems that connect developer documentation, AI-assisted workflows, quality gates, knowledge graphs, and retrieval evaluation into repeatable, reviewable documentation operations.
 
 Or, more specifically:
 

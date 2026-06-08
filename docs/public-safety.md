@@ -30,3 +30,7 @@ Before publishing or pushing changes:
 - Confirm scripts make no network calls
 - Confirm the README describes the project as a demo, not a production system
 
+## Note on Automation
+
+The automated term scan in `quality_gate.py` is a minimal backstop, not the control. A short denylist will miss names, codenames, and identifiers it does not list. Human review is the real boundary; the scan only catches the obvious.
+

@@ -46,4 +46,4 @@ The output includes case-level results plus top-1 and top-3 accuracy compared wi
 
 ## Limits
 
-This is a toy evaluation. It does not claim production accuracy, academic novelty, or statistical significance. It exists to demonstrate the shape of evaluation thinking that can be expanded into a larger docs retrieval benchmark.
+This is a toy evaluation, and it is built to be read as one. The cases are hand-written and the tool keywords are authored to match them, so a high score here reflects the test design, not a retrieval method proving itself. The lift reported is observed accuracy minus a uniform-random baseline: a coarse comparison, not a chance-corrected or information-theoretic measure. It does not claim production accuracy, academic novelty, or statistical significance. It exists to demonstrate the shape of evaluation thinking that can be expanded into a larger docs retrieval benchmark.
