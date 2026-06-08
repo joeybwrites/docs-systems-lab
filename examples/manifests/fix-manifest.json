@@ -1,0 +1,38 @@
+{
+  "manifest_id": "atlas-docs-batch-001",
+  "description": "Synthetic batch-fix manifest for the Atlas SDK docs corpus.",
+  "review_model": "human-reviewed-ai-assisted",
+  "items": [
+    {
+      "id": "DOC-001",
+      "file": "examples/product-docs/quickstart.md",
+      "issue_type": "validation-gap",
+      "severity": "high",
+      "problem": "The setup flow needs an explicit success condition.",
+      "proposed_fix": "Add a verification step that describes the expected session result.",
+      "reviewer": "docs-reviewer",
+      "status": "ready-for-review"
+    },
+    {
+      "id": "DOC-002",
+      "file": "examples/product-docs/api-reference.md",
+      "issue_type": "reference-completeness",
+      "severity": "medium",
+      "problem": "The reference should describe the return value for createSession().",
+      "proposed_fix": "Add a Returns section that names the Session object.",
+      "reviewer": "api-reviewer",
+      "status": "ready-for-review"
+    },
+    {
+      "id": "DOC-003",
+      "file": "examples/product-docs/troubleshooting.md",
+      "issue_type": "reader-safety",
+      "severity": "medium",
+      "problem": "The authentication section should warn readers not to commit tokens.",
+      "proposed_fix": "Add a short token-handling note under Missing Token.",
+      "reviewer": "security-reviewer",
+      "status": "ready-for-review"
+    }
+  ]
+}
+

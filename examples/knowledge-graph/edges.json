@@ -1,0 +1,28 @@
+[
+  {
+    "from": "quickstart-guide",
+    "to": "session-lifecycle",
+    "relationship": "explains"
+  },
+  {
+    "from": "quickstart-guide",
+    "to": "create-session-api",
+    "relationship": "references"
+  },
+  {
+    "from": "auth-token-error",
+    "to": "quickstart-guide",
+    "relationship": "unblocks"
+  },
+  {
+    "from": "release-0-4-0",
+    "to": "create-session-api",
+    "relationship": "changed_by"
+  },
+  {
+    "from": "quickstart-guide",
+    "to": "auth-token-error",
+    "relationship": "requires"
+  }
+]
+

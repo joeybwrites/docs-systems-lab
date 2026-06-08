@@ -1,0 +1,57 @@
+{
+  "tools": [
+    {
+      "id": "doc_search",
+      "description": "Search all product documentation pages for general reader questions.",
+      "keywords": ["search", "docs", "documentation", "guide", "question"]
+    },
+    {
+      "id": "api_reference_lookup",
+      "description": "Look up function signatures, parameters, return values, and API behavior.",
+      "keywords": ["api", "reference", "function", "parameter", "return", "createSession", "sendEvent"]
+    },
+    {
+      "id": "release_notes_lookup",
+      "description": "Find version history, added features, changed behavior, and fixed issues.",
+      "keywords": ["release", "version", "changed", "added", "fixed", "0.4.0"]
+    },
+    {
+      "id": "troubleshooting_lookup",
+      "description": "Find known errors, failure modes, fixes, and debugging guidance.",
+      "keywords": ["error", "troubleshooting", "token", "expired", "missing", "failure"]
+    },
+    {
+      "id": "quality_manifest_lookup",
+      "description": "Inspect batch documentation fix manifests, review states, and proposed fixes.",
+      "keywords": ["manifest", "batch", "review", "quality", "fix", "severity"]
+    }
+  ],
+  "cases": [
+    {
+      "id": "EVAL-001",
+      "query": "What parameters does createSession require?",
+      "expected_tool": "api_reference_lookup"
+    },
+    {
+      "id": "EVAL-002",
+      "query": "What changed in version 0.4.0?",
+      "expected_tool": "release_notes_lookup"
+    },
+    {
+      "id": "EVAL-003",
+      "query": "Why am I getting an expired token error?",
+      "expected_tool": "troubleshooting_lookup"
+    },
+    {
+      "id": "EVAL-004",
+      "query": "Which documentation fixes are ready for review?",
+      "expected_tool": "quality_manifest_lookup"
+    },
+    {
+      "id": "EVAL-005",
+      "query": "How do I get started with the Atlas SDK?",
+      "expected_tool": "doc_search"
+    }
+  ]
+}
+

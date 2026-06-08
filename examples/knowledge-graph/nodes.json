@@ -1,0 +1,33 @@
+[
+  {
+    "id": "session-lifecycle",
+    "type": "concept",
+    "title": "Session lifecycle",
+    "summary": "How an Atlas SDK session is created, used, and closed."
+  },
+  {
+    "id": "quickstart-guide",
+    "type": "guide",
+    "title": "Atlas SDK Quickstart",
+    "path": "examples/product-docs/quickstart.md"
+  },
+  {
+    "id": "create-session-api",
+    "type": "api",
+    "title": "createSession(options)",
+    "path": "examples/product-docs/api-reference.md"
+  },
+  {
+    "id": "auth-token-error",
+    "type": "troubleshooting",
+    "title": "Authentication token errors",
+    "path": "examples/product-docs/troubleshooting.md"
+  },
+  {
+    "id": "release-0-4-0",
+    "type": "release_note",
+    "title": "Atlas SDK 0.4.0",
+    "path": "examples/product-docs/release-notes.md"
+  }
+]
+
