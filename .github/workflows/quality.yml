@@ -22,3 +22,26 @@ jobs:
       - name: Run retrieval eval
         run: python scripts/eval_tool_retrieval.py
 
+  agent-readability-checks:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: tools/agent-readability
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install dev dependencies
+        run: npm ci
+
+      - name: Run unit tests
+        run: npm test
+
+      - name: Validate llms.txt against corpus
+        run: npm run validate
+
