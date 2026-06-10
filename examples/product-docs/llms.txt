@@ -1,0 +1,10 @@
+# Atlas SDK Docs
+
+> Documentation for Atlas SDK, a synthetic example SDK used by Docs Systems Lab to demonstrate documentation operations. Atlas lets an application create a session, send events, and close the session cleanly.
+
+## Docs
+
+- [Atlas SDK API Reference](api-reference.md): This page documents the synthetic Atlas SDK API surface used by the demo docs corpus.
+- [Atlas SDK Quickstart](quickstart.md): Atlas SDK is a synthetic example SDK used by this demo.
+- [Atlas SDK Release Notes](release-notes.md): Version history for the synthetic Atlas SDK, covering added capabilities, behavior changes, and fixes in each release.
+- [Atlas SDK Troubleshooting](troubleshooting.md): Known Atlas SDK failure modes and how to resolve them, covering authentication errors and early session shutdown.
