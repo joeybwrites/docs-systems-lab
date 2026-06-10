@@ -32,6 +32,26 @@
       "proposed_fix": "Add a short token-handling note under Missing Token.",
       "reviewer": "security-reviewer",
       "status": "ready-for-review"
+    },
+    {
+      "id": "DOC-004",
+      "file": "examples/product-docs/release-notes.md",
+      "issue_type": "agent-readability",
+      "severity": "low",
+      "problem": "Page has no intro paragraph after the title, so agent-facing indexes cannot derive a description (flagged by the llms.txt validator).",
+      "proposed_fix": "Add a one-sentence intro paragraph describing what the page covers.",
+      "reviewer": "docs-reviewer",
+      "status": "accepted"
+    },
+    {
+      "id": "DOC-005",
+      "file": "examples/product-docs/troubleshooting.md",
+      "issue_type": "agent-readability",
+      "severity": "low",
+      "problem": "Page has no intro paragraph after the title, so agent-facing indexes cannot derive a description (flagged by the llms.txt validator).",
+      "proposed_fix": "Add a one-sentence intro paragraph describing what the page covers.",
+      "reviewer": "docs-reviewer",
+      "status": "accepted"
     }
   ]
 }

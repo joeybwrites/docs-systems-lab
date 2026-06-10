@@ -1,5 +1,7 @@
 # Atlas SDK Troubleshooting
 
+Known Atlas SDK failure modes and how to resolve them, covering authentication errors and early session shutdown.
+
 ## Missing Token
 
 If `createSession()` returns `AUTH_TOKEN_MISSING`, confirm that `ATLAS_TOKEN` is set in your local environment.

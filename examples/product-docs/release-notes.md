@@ -1,5 +1,7 @@
 # Atlas SDK Release Notes
 
+Version history for the synthetic Atlas SDK, covering added capabilities, behavior changes, and fixes in each release.
+
 ## 0.4.0
 
 Released: 2026-05-15
