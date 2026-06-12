@@ -25,6 +25,12 @@ jobs:
       - name: Run token-tax self-test (offline)
         run: python scripts/token_tax.py --selftest
 
+      - name: Run agentsmd-lint self-test (offline)
+        run: python scripts/agentsmd_lint.py --selftest
+
+      - name: Lint this repo's own AGENTS.md
+        run: python scripts/agentsmd_lint.py . --strict
+
   agent-readability-checks:
     runs-on: ubuntu-latest
     defaults:

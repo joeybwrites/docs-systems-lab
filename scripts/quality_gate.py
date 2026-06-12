@@ -30,6 +30,8 @@ REQUIRED_FILES = [
     "examples/evals/tool-retrieval-set.json",
     "docs/token-tax.md",
     "examples/evals/token-tax-sites.json",
+    "docs/agentsmd-lint.md",
+    "AGENTS.md",
 ]
 REQUIRED_MANIFEST_FIELDS = {
     "id",

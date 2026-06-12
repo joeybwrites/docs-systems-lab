@@ -15,6 +15,7 @@ The project also models a cost-aware AI documentation ethos: use structured stat
 - A simple tool-retrieval evaluation that compares selected tools against a random baseline
 - An agent-readable docs index (llms.txt) that is generated from corpus structure and validated in CI so it cannot drift from the docs it describes
 - A token-tax measurement that tests the "markdown saves agents 10x" claim against real documentation sites instead of repeating it
+- A research-grounded AGENTS.md linter that turns the 2026 context-file field study into enforceable checks, dogfooded on this repo's own AGENTS.md in CI
 - Low-overhead AI documentation operations that minimize token spend, review burden, and context drift
 - Public/private boundary checks for portfolio-safe documentation systems work
 
@@ -78,11 +79,14 @@ All scripts use only the Python standard library (token_tax uses tiktoken for ex
 | `scripts/eval_tool_retrieval.py` | Scores a simple retrieval tool selection task |
 | `scripts/token_tax.py` | Measures raw-HTML vs extracted vs markdown token cost on live docs pages |
 | `docs/token-tax.md` | Methodology, first-run findings, and honest limits of the token-tax measurement |
+| `scripts/agentsmd_lint.py` | Lints AGENTS.md/CLAUDE.md files against the context-file field study |
+| `docs/agentsmd-lint.md` | Rule-to-evidence mapping, field sample, and limits of the linter |
+| `AGENTS.md` | This repo's own minimal context file, kept lint-clean by CI |
 | `examples/evals/token-tax-sites.json` | The measured page list (extend by editing) |
 | `examples/evals/token-tax-results.csv` | Committed first-run data, including the visible failure rows |
 | `examples/product-docs/llms.txt` | Agent-readable index of the docs corpus (llms.txt convention) |
 | `tools/agent-readability/` | TypeScript generator and validator for llms.txt (zero runtime dependencies, node:test) |
-| `.github/workflows/quality.yml` | Runs both checks in GitHub Actions |
+| `.github/workflows/quality.yml` | Runs the Python gates, self-tests, AGENTS.md lint, and Node checks in GitHub Actions |
 
 ## Portfolio Framing
 
