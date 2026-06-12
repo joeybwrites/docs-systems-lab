@@ -14,6 +14,7 @@ The project also models a cost-aware AI documentation ethos: use structured stat
 - A small knowledge graph that connects concepts, guides, API references, and troubleshooting pages
 - A simple tool-retrieval evaluation that compares selected tools against a random baseline
 - An agent-readable docs index (llms.txt) that is generated from corpus structure and validated in CI so it cannot drift from the docs it describes
+- A token-tax measurement that tests the "markdown saves agents 10x" claim against real documentation sites instead of repeating it
 - Low-overhead AI documentation operations that minimize token spend, review burden, and context drift
 - Public/private boundary checks for portfolio-safe documentation systems work
 
@@ -50,7 +51,14 @@ Run the tool-retrieval evaluation:
 python scripts/eval_tool_retrieval.py
 ```
 
-Both scripts use only the Python standard library.
+Run the token-tax self-test (offline) or a live measurement:
+
+```bash
+python scripts/token_tax.py --selftest
+python scripts/token_tax.py --sites examples/evals/token-tax-sites.json
+```
+
+All scripts use only the Python standard library (token_tax uses tiktoken for exact counts when installed, with a stated approximation otherwise).
 
 ## Repo Map
 
@@ -68,6 +76,10 @@ Both scripts use only the Python standard library.
 | `examples/evals/tool-retrieval-set.json` | Test cases for retrieval evaluation |
 | `scripts/quality_gate.py` | Checks manifest structure, doc hygiene, and public-safety terms |
 | `scripts/eval_tool_retrieval.py` | Scores a simple retrieval tool selection task |
+| `scripts/token_tax.py` | Measures raw-HTML vs extracted vs markdown token cost on live docs pages |
+| `docs/token-tax.md` | Methodology, first-run findings, and honest limits of the token-tax measurement |
+| `examples/evals/token-tax-sites.json` | The measured page list (extend by editing) |
+| `examples/evals/token-tax-results.csv` | Committed first-run data, including the visible failure rows |
 | `examples/product-docs/llms.txt` | Agent-readable index of the docs corpus (llms.txt convention) |
 | `tools/agent-readability/` | TypeScript generator and validator for llms.txt (zero runtime dependencies, node:test) |
 | `.github/workflows/quality.yml` | Runs both checks in GitHub Actions |
@@ -82,7 +94,7 @@ Or, more specifically:
 
 > I design low-overhead AI documentation operations that use structured context, targeted retrieval, and quality gates to improve documentation throughput without runaway token cost or review burden.
 
-It is intentionally compact. A reviewer should be able to scan the README, run two scripts, and understand the underlying approach in less than ten minutes.
+It is intentionally compact. A reviewer should be able to scan the README, run the scripts, and understand the underlying approach in less than ten minutes.
 
 ## Suggested Next Extensions
 

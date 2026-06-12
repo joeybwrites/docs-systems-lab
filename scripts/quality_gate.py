@@ -28,6 +28,8 @@ REQUIRED_FILES = [
     "examples/product-docs/troubleshooting.md",
     "examples/manifests/fix-manifest.json",
     "examples/evals/tool-retrieval-set.json",
+    "docs/token-tax.md",
+    "examples/evals/token-tax-sites.json",
 ]
 REQUIRED_MANIFEST_FIELDS = {
     "id",

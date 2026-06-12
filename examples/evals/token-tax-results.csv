@@ -1,0 +1,11 @@
+url,html_tokens,extracted_tokens,markdown_tokens,markdown_source,html_over_extracted,html_over_markdown,token_method
+https://code.claude.com/docs/en/overview,282991,2486,3790,https://code.claude.com/docs/en/overview.md,113.8,74.7,approx_chars_div_4
+https://code.claude.com/docs/en/hooks-guide,512457,10024,14482,https://code.claude.com/docs/en/hooks-guide.md,51.1,35.4,approx_chars_div_4
+https://mintlify.com/docs/index,150696,117,810,https://mintlify.com/docs/index.md,1288.0,186.0,approx_chars_div_4
+https://docs.github.com/en/get-started/start-your-journey/hello-world,47624,2058,2646,https://docs.github.com/en/get-started/start-your-journey/hello-world.md,23.1,18.0,approx_chars_div_4
+https://developer.mozilla.org/en-US/docs/Web/JavaScript,49964,1446,,,34.6,,approx_chars_div_4
+https://docs.python.org/3/tutorial/index.html,9272,1734,,,5.3,,approx_chars_div_4
+https://docs.stripe.com/payments,106858,721,1329,https://docs.stripe.com/payments.md,148.2,80.4,approx_chars_div_4
+https://vercel.com/docs,1603,1592,,,1.0,,approx_chars_div_4
+https://docs.astro.build/en/getting-started/,36240,292,,,124.1,,approx_chars_div_4
+https://fastapi.tiangolo.com/tutorial/,25662,1208,,,21.2,,approx_chars_div_4

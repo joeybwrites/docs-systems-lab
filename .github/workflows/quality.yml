@@ -22,6 +22,9 @@ jobs:
       - name: Run retrieval eval
         run: python scripts/eval_tool_retrieval.py
 
+      - name: Run token-tax self-test (offline)
+        run: python scripts/token_tax.py --selftest
+
   agent-readability-checks:
     runs-on: ubuntu-latest
     defaults:
